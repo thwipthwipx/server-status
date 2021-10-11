@@ -19,6 +19,7 @@ disk_usage_free = ("%d GiB" % (disk_usage.free // (2 ** 30)))
 virtual_memory = psutil.virtual_memory()
 virtual_memory_total = ("%d GiB" % (virtual_memory.total // (2 ** 30)))
 virtual_memory_used = ("%d GiB" % (virtual_memory.used // (2 ** 30)))
+virtual_memory_free = ("%d GiB" % (virtual_memory.free // (2 ** 30)))
 
 # get backups from directories with the current edit date
 backup_dir = 'find ' + config.backup_dir + ' -type f -mtime -1'
@@ -36,6 +37,7 @@ output_message = "<b>Сервер:</b> " + "\n" + \
                  "<b>Оперативная память:</b>" + "\n" + \
                  "Всего: " + virtual_memory_total + "\n" + \
                  "Использовано: " + virtual_memory_used + "\n" + \
+                 "Свободно: " + virtual_memory_free + "\n" + \
                  "\n" + \
                  "<b>Список бэкапов за сегодня: </b>" + "\n" + \
                  backups_list

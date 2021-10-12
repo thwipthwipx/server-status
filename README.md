@@ -1,6 +1,6 @@
 # server-status
 
-Allows you to find out free space, free RAM and check current backups
+Allows you to find out free space, free RAM and check current counts of backups
 
 ## Usage
 1. upload the project to your server
@@ -20,6 +20,10 @@ pip3 install -r requirements.txt
 token = 'telegram bot api key'
 chat_id = 'id channel in telegram'
 backup_dir = 'path to the folder with backups'
+backup_hours = 'how many hours to search for backups'
+sites_dir = 'directory where sites are located'
+file_type = 'd, f or l (from find utility)' for sites_dir
+exclude_sites = 'which sites to exclude, for example, all that have in the domain "now": now*
 ```
 The bot must be an administrator in your channel
 6. Try to run and check it works

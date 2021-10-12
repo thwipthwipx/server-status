@@ -1,3 +1,7 @@
 token = ''
 chat_id = ''
 backup_dir = ''
+backup_hours = ''
+sites_dir = ''
+file_type = ''
+exclude_sites = ''

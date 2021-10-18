@@ -27,8 +27,7 @@ backup_dir = 'find ' + config.backup_dir + ' -type f -mmin ' + config.backup_hou
 backups_count = subprocess.getoutput(backup_dir)
 
 # get the count of sites
-sites_dir = 'find ' + config.sites_dir + ' -type ' + config.file_type + ' -not -name ' + config.exclude_sites + \
-            ' | wc -l'
+sites_dir = 'find ' + config.sites_dir + ' -type ' + config.file_type + config.params + ' | wc -l'
 sites_dir_count = subprocess.getoutput(sites_dir)
 
 # generate a message in telegram

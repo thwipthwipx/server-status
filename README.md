@@ -23,9 +23,10 @@ backup_dir = 'path to the folder with backups'
 backup_hours = 'how many hours to search for backups'
 sites_dir = 'directory where sites are located'
 file_type = 'd, f or l (from find utility)' for sites_dir
-exclude_sites = 'which sites to exclude, for example, all that have in the domain "now": now*
+params = 'additional parameters of the find utility, for example: -not -name default'
 ```
 The bot must be an administrator in your channel
+
 6. Try to run and check it works
 ```
 ./server-status.sh
